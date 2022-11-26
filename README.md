@@ -2,6 +2,8 @@
 
 A DragonRuby Game Toolkit Game Starter Template
 
+_Scale is currently a work in progress!_
+
 ## Bugs / Features
 
 - Displays framerate in the upper-right hand corner of the game when running in development mode

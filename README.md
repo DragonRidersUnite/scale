@@ -1,8 +1,10 @@
 # Scale
 
-A DragonRuby Game Toolkit Game Starter Template
+**DragonRuby Game Toolkit Game Starter Template**
 
 _Scale is currently a work in progress!_
+
+Quickly start a new DragonRuby Game Toolkit game with helpful extensions.
 
 ## Bugs / Features
 

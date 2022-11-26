@@ -1,0 +1,7 @@
+log.filter_subsystems=HTTPServer
+
+# Should use the whole display
+# renderer.fullscreen=true
+
+# Milliseconds to sleep per frame when the game is in the background (zero to disable)
+# renderer.background_sleep=0

@@ -1,0 +1,73 @@
+devid=myitchusername
+devtitle=My Name
+gameid=my-game-title
+gametitle=My Game Title
+version=0.1
+icon=metadata/icon.png
+
+# === Flags available at all licensing tiers ===
+
+# Defines the render scale quality for sprites. scale_quality=0 (default) is nearest neighbor, scale_quality=1 is linear, scale_quality=2 is antialiased.
+# scale_quality=0
+
+# === Flags available in DragonRuby Game Toolkit Pro ====
+
+# Uncomment the entry below to bytecode compile your Ruby code
+# compile_ruby=false
+
+# Uncomment the entry below to specify the package name for your APK
+# packageid=org.dev.gamename
+
+# Setting this property to true will enable High DPI rendering (try in combination with scale_quality to see what looks best)
+# highdpi=false
+
+# === Portrait Mode ===
+# The orientation can be set to either landscape (1280x720) or portrait (720x1280)
+# orientation=landscape
+
+# === HD Mode ===
+
+# HD Mode: when enabled, will give you 720p, 1080p, 1440p, 4k, and 5k rendering options
+# Check out the following YouTube Video for a demo of DragonRuby's HD Capabilities
+# https://youtu.be/Rnc6z84zaa4
+# hd=false
+
+# === Texture Atlases ===
+
+# See sample app for texture atlas usage: =./samples/07_advanced_rendering_hd/02_texture_atlases=
+# DragonRuby will recursively search the following directory for texture atlases.
+# sprites_directory=sprites
+
+# === All Screen Mode ===
+
+# All Screen Mode: when enabled, removes the letter box and lets you render outside of the 16:9 safe area
+# NOTE: requires hd=true
+# allscreen=false
+
+# All Screen Mode's Max Scale: You can specify the maximum scale for your game. Any resolution higher than your max scale will give more area outside of your resolutions safe area:
+
+# default value is 100 (which keeps the baseline 720p and draws to all screen area from there)
+# allscreen_max_scale=100
+
+# Supported values for max scale:
+
+# 720p: scales up to 1280x720 (and draws to all screen area from there)
+# allscreen_max_scale=100
+
+# HD+: scales up to 1600x900
+# allscreen_max_scale=125
+
+# 1080p: scales up to 1920x1080
+# allscreen_max_scale=150
+
+# 1440p: scales up to 2560x1440
+# allscreen_max_scale=200
+
+# 1800p: scales up to 3200x1800
+# allscreen_max_scale=250
+
+# 4k: scales up to 3200x2160
+# allscreen_max_scale=300
+
+# 5k: scales up to 6400x2880
+# allscreen_max_scale=400

@@ -1,0 +1,13 @@
+# ios_metadata.txt is used by the Pro version of DragonRuby Game Toolkit to create iOS apps.
+# Information about the Pro version can be found at: http://dragonruby.org/toolkit/game#purchase
+
+# teamid needs to be set to your assigned Team Id which can be found at https://developer.apple.com/account/#/membership/
+teamid=
+# appid needs to be set to your application identifier which can be found at https://developer.apple.com/account/resources/identifiers/list
+appid=
+# appname is the name you want to show up underneath the app icon on the device. Keep it under 10 characters.
+appname=
+# devcert is the certificate to use for development/deploying to your local device. This is the NAME of the certificate as it's displayed in Keychain Access.
+devcert=
+# prodcert is the certificate to use for distribution to the app store. This is the NAME of the certificate as it's displayed in Keychain Access.
+prodcert=

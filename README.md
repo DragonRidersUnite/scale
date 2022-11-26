@@ -1,5 +1,7 @@
 # Scale
 
+![repeating red dragon scale pixel art](https://user-images.githubusercontent.com/928367/204090457-0d096cbe-21cc-4753-9c63-f7786d165cfa.png)
+
 **DragonRuby Game Toolkit Game Starter Template**
 
 _Scale is currently a work in progress!_

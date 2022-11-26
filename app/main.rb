@@ -1,3 +1,4 @@
+TRUE_BLACK = [0, 0, 0]
 WHITE = [255, 255, 255]
 
 # Access in code with `SPATHS[:my_sprite]`
@@ -11,6 +12,8 @@ def debug?
 end
 
 def tick(args)
+  args.outputs.background_color = TRUE_BLACK
+
   debug_tick(args)
 end
 

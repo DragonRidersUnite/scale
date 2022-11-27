@@ -13,6 +13,8 @@ Quickly start a new DragonRuby Game Toolkit game with helpful extensions.
 - Displays framerate in the upper-right hand corner of the game when running in development mode
 - `#debug?` helper to easily check if the game is running in development mode; useful for custom commands
 - Reload all sprites in development using the `i` key, requires use of `SPATHS` constant
+- Reset the game with `r` key, calls `$gtk.reset`
+- Put all debug-only code in `#debug_tick`
 
 ## Use It
 

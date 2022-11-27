@@ -22,8 +22,12 @@ def debug_tick(args)
 
   args.outputs.debug << [args.grid.w - 12, args.grid.h, "#{args.gtk.current_framerate.round}", 0, 1, *WHITE.values].label
 
-  if args.inputs.keyboard.key_up.i
+  if args.inputs.keyboard.key_downi
     SPATHS.each { |_, v| args.gtk.reset_sprite(v) }
     args.gtk.notify!("Sprites reloaded")
+  end
+
+  if args.inputs.keyboard.key_down.r
+    $gtk.reset
   end
 end

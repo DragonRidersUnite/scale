@@ -15,6 +15,7 @@ Quickly start a new DragonRuby Game Toolkit game with helpful extensions.
 - Reload all sprites in development using the `i` key, requires use of `SPATHS` constant
 - Reset the game with `r` key, calls `$gtk.reset`
 - Put all debug-only code in `#debug_tick`
+- `#init` method that gets run once on game boot
 
 ## Use It
 

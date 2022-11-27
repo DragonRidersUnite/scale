@@ -7,14 +7,20 @@ SPATHS = {
   my_sprite: "sprites/my_sprite.png",
 }
 
-def debug?
-  !$gtk.production
+# Code that only gets run once on game start
+def init(args)
 end
 
 def tick(args)
+  init(args) if args.state.tick_count == 0
+
   args.outputs.background_color = TRUE_BLACK.values
 
   debug_tick(args)
+end
+
+def debug?
+  !$gtk.production
 end
 
 def debug_tick(args)

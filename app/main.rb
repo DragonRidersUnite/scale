@@ -1,5 +1,5 @@
-TRUE_BLACK = [0, 0, 0]
-WHITE = [255, 255, 255]
+TRUE_BLACK = { r: 0, g: 0, b: 0 }
+WHITE = { r: 255, g: 255, b: 255 }
 
 # Access in code with `SPATHS[:my_sprite]`
 # Replace with your sprites!
@@ -12,13 +12,13 @@ def debug?
 end
 
 def tick(args)
-  args.outputs.background_color = TRUE_BLACK
+  args.outputs.background_color = TRUE_BLACK.values
 
   debug_tick(args)
 end
 
 def debug_tick(args)
-  args.outputs.debug << [args.grid.w - 12, args.grid.h, "#{args.gtk.current_framerate.round}", 0, 1, *WHITE].label
+  args.outputs.debug << [args.grid.w - 12, args.grid.h, "#{args.gtk.current_framerate.round}", 0, 1, *WHITE.values].label
 
   if debug? && args.inputs.keyboard.key_up.i
     SPATHS.each { |_, v| args.gtk.reset_sprite(v) }

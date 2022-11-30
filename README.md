@@ -16,6 +16,7 @@ Quickly start a new DragonRuby Game Toolkit game with helpful extensions.
 - Reset the game with `r` key, calls `$gtk.reset`
 - Put all debug-only code in `#debug_tick`
 - `#init` method that gets run once on game boot
+- `CHEATSHEET.md` with common APIs from DRGTK and Scale
 
 ## Use It
 

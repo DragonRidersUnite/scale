@@ -19,6 +19,11 @@ def tick(args)
   debug_tick(args)
 end
 
+# The version of your game defined in `metadata/game_metadata.txt`
+def version
+  $gtk.args.cvars['game_metadata.version'].value
+end
+
 def debug?
   !$gtk.production
 end

@@ -17,6 +17,7 @@ Last tested against DragonRuby Game Toolkit v3.24.
 - Put all debug-only code in `#debug_tick`
 - `#init` method that gets run once on game boot
 - `CHEATSHEET.md` with common APIs from DRGTK and Scale
+- `#version` to get the version of your game
 
 ## Use It
 

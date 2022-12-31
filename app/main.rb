@@ -1,5 +1,14 @@
+FPS = 60
 TRUE_BLACK = { r: 0, g: 0, b: 0 }
 WHITE = { r: 255, g: 255, b: 255 }
+ALIGN_LEFT = 0
+ALIGN_CENTER = 1
+ALIGN_RIGHT = 2
+BLEND_NONE = 0
+BLEND_ALPHA = 1
+BLEND_ADDITIVE = 2
+BLEND_MODULO = 3
+BLEND_MULTIPLY = 4
 
 # Access in code with `SPATHS[:my_sprite]`
 # Replace with your sprites!

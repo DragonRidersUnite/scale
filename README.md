@@ -18,6 +18,7 @@ Last tested against DragonRuby Game Toolkit v3.24.
 - `#init` method that gets run once on game boot
 - `CHEATSHEET.md` with common APIs from DRGTK and Scale
 - `#version` to get the version of your game
+- Constants for various values and enums: `FPS`, `BLEND_*`, `ALIGN_*`
 
 ## Use It
 

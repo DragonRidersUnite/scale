@@ -6,6 +6,8 @@
 
 Quickly start a new DragonRuby Game Toolkit game with helpful extensions.
 
+Looking for a simpler version? Check out [the `simple` release](https://github.com/DragonRidersUnite/scale/releases/tag/simple) that's just `app/main.rb` with some constants and helper methods.
+
 ## Bugs / Features
 
 Last tested against DragonRuby Game Toolkit v3.24.

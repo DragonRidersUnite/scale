@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+set -e
+rm -f test-failures.txt
+if ! ../dragonruby . --eval app/tests.rb  --no-tick --exit-on-fail; then
+	echo "🙀 tests failed!"
+	cat test-failures.txt
+	exit 1
+else
+	echo "🪩 tests passed!"
+fi

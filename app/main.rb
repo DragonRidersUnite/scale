@@ -1,11 +1,3 @@
-# EXQUISITE CORPS
-# ~a collaborative jam of chaos~
-
-# add your name to this array!
-CREDITS = [
-  "Brett Chalupa",
-].shuffle
-
 require "app/input.rb"
 require "app/sprite.rb"
 

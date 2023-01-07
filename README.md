@@ -12,7 +12,9 @@ Looking for a simpler version? Check out [the `simple` release](https://github.c
 
 Last tested against DragonRuby Game Toolkit v4.0.
 
+- Menus and pause screen
 - Defined location for where to put scenes
+- Settings that persist to disk
 - Displays framerate in the upper-right hand corner of the game when running in development mode
 - `#debug?` helper to easily check if the game is running in development mode; useful for custom commands
 - Reload all sprites in development using the `i` key

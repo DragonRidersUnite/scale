@@ -1,5 +1,7 @@
 module Scene
   class << self
+    # reachable via main menu or pause menu, allows for configuring the game
+    # for the player's preferences.
     def tick_settings(args)
       draw_bg(args, DARK_GREEN)
 

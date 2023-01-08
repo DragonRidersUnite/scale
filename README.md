@@ -94,3 +94,9 @@ If you find yourself adding the same files, methods, constants, etc. to your DRG
 ---
 
 [Clear this README out and add your own details!]
+
+## Debug Shortcuts
+
+- <kbd>0</kbd> — display debug details (ex: framerate)
+- <kbd>i</kbd> — reload sprites from disk
+- <kbd>r</kbd> — reset the entire game state

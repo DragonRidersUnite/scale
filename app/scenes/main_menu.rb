@@ -1,5 +1,6 @@
 module Scene
   class << self
+    # what's displayed when your game starts
     def tick_main_menu(args)
       draw_bg(args, DARK_PURPLE)
       options = [

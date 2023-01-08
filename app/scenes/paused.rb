@@ -1,5 +1,6 @@
 module Scene
   class << self
+    # scene reached from gameplay when the player needs a break
     def tick_paused(args)
       draw_bg(args, DARK_GOLD)
 

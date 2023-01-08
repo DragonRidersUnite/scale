@@ -1,5 +1,6 @@
 require "app/input.rb"
 require "app/sprite.rb"
+require "app/util.rb"
 
 require "app/constants.rb"
 require "app/menu.rb"

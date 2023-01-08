@@ -146,28 +146,6 @@ def debug_tick(args)
     play_sfx(args, :select)
     $gtk.reset
   end
-
-  if args.inputs.keyboard.key_down.zero
-    play_sfx(args, :select)
-    args.state.render_debug_details = !args.state.render_debug_details
-  end
-
-  player = args.state.player
-  if player
-    if args.inputs.keyboard.key_down.one
-      play_sfx(args, :select)
-      Player.level_up(args, player)
-    end
-
-    if args.inputs.keyboard.key_down.two
-      play_sfx(args, :select)
-      player.invincible = !player.invincible
-      args.gtk.notify!("Player invincibility toggled")
-    end
-    if player.invincible && args.state.scene == :gameplay
-      args.outputs.labels << label("inv", x: player.x + player.w / 2, y: player.y + player.h + 16, align: ALIGN_CENTER, size: SIZE_XS)
-    end
-  end
 end
 
 # render a label that is only shown when in debug mode and the debug details

@@ -150,4 +150,46 @@ test :percent_chance? do |args, assert|
   end
 end
 
+test :collide do |args, assert|
+  it "calls the block for every intersection of the two collections" do
+    counter = 0
+    enemies = [{ x: 0, y: 0, w: 8, h: 8, type: :e}, { x: 8, y: 0, w: 8, h: 8, type: :e}]
+    # 2 enemies intersect with only 1 of these tiles
+    tiles = [{ x: 0, y: 0, w: 32, h: 32}, { x: 32, y: 0, w: 32, h: 32}]
+
+    collide(enemies, tiles) do |enemy, tile|
+      counter += 1
+      assert.equal!(enemy.type, :e)
+    end
+
+    assert.equal!(counter, 2)
+  end
+
+  it "has access to args in the block" do
+    args.state.detect = false
+    enemies = [{ x: 0, y: 0, w: 8, h: 8}]
+    tiles = [{ x: 0, y: 0, w: 32, h: 32}]
+
+    collide(enemies, tiles) do |enemy, tile|
+      args.state.detect = true
+    end
+
+    assert.true!(args.state.detect)
+  end
+
+  it "wraps non-arrays in an array" do
+    counter = 0
+    tiles = [{ x: 0, y: 0, w: 32, h: 32}, { x: 32, y: 0, w: 32, h: 32}]
+    # player only intersects with 1 tile
+    player = { x: 0, y: 0, w: 8, h: 8, type: :player}
+
+    collide(tiles, player) do |tile, player|
+      counter += 1
+      assert.equal!(player.type, :player)
+    end
+
+    assert.equal!(counter, 1)
+  end
+end
+
 run_tests

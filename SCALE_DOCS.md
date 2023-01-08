@@ -122,6 +122,18 @@ end
 
 Then when you want to show the Credits scene, call `Scene.switch(args, :credits)`.
 
+### Collision Detection
+
+Scale provides you with a collision method that executes the passed in block for each element that intersects:
+
+``` ruby
+collide(tiles, bullets) do |tile, bullet|
+  bullet.dead = true
+end
+```
+
+It takes arrays or single objects as parameters.
+
 ### Colors
 
 A simple color palette is provided in `app/constants.rb`. Most of the primary colors are present, along with some variants. They return Hashes with `r`, `g`, and `b` keys. If you have a sprite that you want to change red, you'd do this:

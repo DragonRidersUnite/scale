@@ -43,7 +43,7 @@ You could add more methods for various inputs in your game. Maybe there's a seco
 
 Here's an example of how you'd use it if you wanted to have your player swing their sword:
 
-```
+``` ruby
 if primary_down?(args.inputs)
   swing_sword(args, args.state.player)
 end
@@ -160,10 +160,36 @@ player = args.state.player
 debug_label(args, player.x, player.y - 4, "#{player.x}, #{player.y}")
 ```
 
+### Tests
+
+The `app/tests.rb` contains tests for the methods provided by Scale, as well as the source for [DragonTest](https://github.com/DragonRidersUnite/dragon_test), a simple testing library for DragonRuby GTK. You'll see plenty of examples in there, but here's a quick overview:
+
+Write tests:
+
+``` ruby
+test :text_for_setting_val do |args, assert|
+  it "returns proper text for boolean vals" do
+    assert.equal!(text_for_setting_val(true), "ON")
+    assert.equal!(text_for_setting_val(false), "OFF")
+  end
+
+  it "passes the value through when not a boolean" do
+    assert.equal!(text_for_setting_val("other"), "other")
+  end
+end
+```
+
+You've got these assertions:
+
+- `assert.true!` - whether or not what's passed in is truthy, ex: `assert.true!(5 + 5 == 10)`
+- `assert.false!` - whether or not what's passed in is falsey, ex: `assert.false!(5 + 5 != 10)`
+- `assert.equal!` - whether or not what's passed into param 1 is equal to param 2, ex: `assert.equal!(5, 2 + 3)`
+- `assert.exception!` - expect the called code to raise an error, ex: `assert.exception!(-> (args) { text(args, :not_present) }, KeyError, "Key not found: :not_present")`
+
+Run your tests with: `./run_tests` — test runner script for Unix-like environments with a shell that has proper exit codes on success and fail
+
+Your tests will also run when you save `app/tests.rb` and be output to your running game's logs. Nifty!
+
 ## Make Scale Yours!
 
 This is your game now. Scale is just here to help you out. Change Scale to meet your game's needs.
-
-## Scripts
-
-- `run_tests` — test runner for Unix-like environments with a shell that has proper exit codes on success and fail

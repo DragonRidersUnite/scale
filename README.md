@@ -64,6 +64,12 @@ I generally would say: don't worry about it! Take ownership over the code in you
 
 But if you do find yourself wanting to keep it updated, [watch the GitHub repo](https://github.com/DragonRidersUnite/scale) for releases. You could pull in just the changes you want. Or you could set an upstream in your repo to the template and merge the changes in.
 
+## Release Approach & Versioning
+
+Code on the `main` branch is intended to be stable because Scale is a template. When significant changes have been made, a tag and release are created. This allows progress to be tracked and previous versions to be easily downloaded.
+
+Scale uses a simplified major.minor versioning scheme. Major version bumps means there are breaking changes to the API (the methods and structure). Minor bumps mean non-breaking additions and fixes.
+
 ## Template License
 
 The template source code falls under the [Unlicense](https://unlicense.org/), meaning it is dedicated to the public domain and you are free to do with it what you want.

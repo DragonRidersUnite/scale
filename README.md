@@ -15,8 +15,10 @@ Looking for a simpler version? Check out [the `simple` release](https://github.c
 Last tested against DragonRuby Game Toolkit v4.0.
 
 - Functional approach to the code, namespaced in modules
+- Use the DragonRuby GTK methods and data structures you know and love
 - Driven by `args.state`
 - Menus and pause screen
+- Sensible default controls
 - Defined location for where to put scenes
 - Settings that persist to disk
 - Displays framerate in the upper-right hand corner of the game when running in development mode
@@ -25,7 +27,6 @@ Last tested against DragonRuby Game Toolkit v4.0.
 - Reset the game with `r` key, calls `$gtk.reset`
 - Put all debug-only code in `#debug_tick`
 - `#init` method that gets run once on game boot
-- `CHEATSHEET.md` with common APIs from DRGTK and Scale
 - `#version` to get the version of your game
 - Constants for various values and enums: `FPS`, `BLEND_*`, `ALIGN_*`
 - Tests for the methods!
@@ -71,7 +72,7 @@ But if you do find yourself wanting to keep it updated, [watch the GitHub repo](
 
 ## Documentation
 
-Coming soon!
+Every game that uses Scale comes with the [SCALE_DOCS.md](./SCALE_DOCS.md) file. Read through that document to find a quickstart guide and information about useful methods.
 
 ## Release Approach & Versioning
 

@@ -5,5 +5,5 @@
 		"fix",
 		"chore"
 	],
-	"breaking_changes": false
+	"breaking_changes": true
 }

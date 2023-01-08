@@ -14,6 +14,8 @@ Looking for a simpler version? Check out [the `simple` release](https://github.c
 
 Last tested against DragonRuby Game Toolkit v4.0.
 
+- Functional approach to the code, namespaced in modules
+- Driven by `args.state`
 - Menus and pause screen
 - Defined location for where to put scenes
 - Settings that persist to disk
@@ -26,10 +28,13 @@ Last tested against DragonRuby Game Toolkit v4.0.
 - `CHEATSHEET.md` with common APIs from DRGTK and Scale
 - `#version` to get the version of your game
 - Constants for various values and enums: `FPS`, `BLEND_*`, `ALIGN_*`
+- Tests for the methods!
 
 ## Use It
 
 There are two main ways you can use the Scale template for your games.
+
+[📺 Video demo showing how to get started](https://www.youtube.com/watch?v=eek3a3aO-zo)
 
 ### Download the Zip
 
@@ -63,6 +68,10 @@ Because Scale is a template with all of its source as part of your game, updatin
 I generally would say: don't worry about it! Take ownership over the code in your game and change what Scale provides you without concern. When it comes time to start your next game, Scale will be updated and improved.
 
 But if you do find yourself wanting to keep it updated, [watch the GitHub repo](https://github.com/DragonRidersUnite/scale) for releases. You could pull in just the changes you want. Or you could set an upstream in your repo to the template and merge the changes in.
+
+## Documentation
+
+Coming soon!
 
 ## Release Approach & Versioning
 

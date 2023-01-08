@@ -4,7 +4,9 @@
 
 **Simple DragonRuby Game Toolkit Game Starter Template**
 
-Quickly start a new DragonRuby Game Toolkit game with helpful extensions.
+Status: usable but not yet stable! This is pre-v1 software.
+
+Quickly start a new DragonRuby Game Toolkit game with useful conventions and helpful extensions.
 
 Looking for a simpler version? Check out [the `simple` release](https://github.com/DragonRidersUnite/scale/releases/tag/simple) that's just `app/main.rb` with some constants and helper methods.
 
@@ -53,6 +55,14 @@ If you're going to track your game with Git and use GitHub, the baked-in templat
 6. Delete the `mygame` directory
 7. Clone your new repository into the DRGTK engine folder with the folder name `mygame`, example: `git clone git@github.com:USERNAME/REPO.git mygame`
 7. Start DragonRuby, and make an awesome game!
+
+### Updating
+
+Because Scale is a template with all of its source as part of your game, updating the framework's source code in your game isn't an easy thing to do.
+
+I generally would say: don't worry about it! Take ownership over the code in your game and change what Scale provides you without concern. When it comes time to start your next game, Scale will be updated and improved.
+
+But if you do find yourself wanting to keep it updated, [watch the GitHub repo](https://github.com/DragonRidersUnite/scale) for releases. You could pull in just the changes you want. Or you could set an upstream in your repo to the template and merge the changes in.
 
 ## Template License
 

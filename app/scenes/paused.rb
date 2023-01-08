@@ -28,6 +28,11 @@ module Scene
 
       Menu.tick(args, :paused, options)
 
+      if secondary_down?(args.inputs)
+        play_sfx(args, :select)
+        options.find { |o| o[:key] == :resume }[:on_select].call(args)
+      end
+
       args.outputs.labels << label(:paused, x: args.grid.w / 2, y: args.grid.top - 200, align: ALIGN_CENTER, size: SIZE_LG, font: FONT_BOLD)
     end
   end

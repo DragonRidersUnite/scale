@@ -37,6 +37,8 @@ Scale comes with some helper methods to make checking for input from multiple so
 
 - `primary_down?` — check if J, Z, Space, or Gamepad A button was just pressed
 - `primary_down_or_held?` — check if J, Z, Space, or Gamepad A button was just pressed or is being held
+- `secondary_down?` — check if K, X, Backspace, or Gamepad B button was just pressed
+- `secondary_down_or_held?` — check if K, X, Backspace, or Gamepad B button was just pressed or is being held
 - `pause_down?` — check if Escape, P, or Gamepad Start button was just pressed, which pauses the game
 
 You could add more methods for various inputs in your game. Maybe there's a secondary button you use. Or any number of them! These input methods make it really easy to support various input methods without worrying about the keys/buttons that are being pressed. Want to add a new key for a given layout? Just change it.

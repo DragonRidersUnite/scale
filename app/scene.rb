@@ -22,16 +22,11 @@ module Scene
       end
 
       if reset
-        case scene
-        when :gameplay
-          args.state.player = nil
-          args.state.enemies = nil
-          args.state.enemies_destroyed = nil
-          args.state.exp_chips = nil
-        else
-          args.state.send(scene)&.current_option_i = nil
-          args.state.send(scene)&.hold_delay = nil
-        end
+        args.state.send(scene)&.current_option_i = nil
+        args.state.send(scene)&.hold_delay = nil
+
+        # you can also add custom reset logic as-needed for specific scenes
+        # here
       end
 
       args.state.scene = scene

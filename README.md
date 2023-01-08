@@ -93,7 +93,7 @@ If you find yourself adding the same files, methods, constants, etc. to your DRG
 
 ---
 
-[Clear this README out and add your own details!]
+[Clear out what's above in this README out and add your own details for making your game!]
 
 ## Debug Shortcuts
 

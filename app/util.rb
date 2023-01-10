@@ -23,7 +23,7 @@ def open_entity_to_hash(open_entity)
   open_entity.as_hash.except(:entity_id, :entity_name, :entity_keys_by_ref, :__thrash_count__)
 end
 
-# Executes the callback for each intersection of the collections. Doesn't check
+# Executes the block for each intersection of the collections. Doesn't check
 # intersections within a parameter
 #
 # Block arguments are an instance of each collection, ordered by the parameter

@@ -12,9 +12,9 @@ end
 # returns true the passed in % of the time
 # ex: `percent_chance?(25)` -- 1/4 chance of returning true
 def percent_chance?(percent)
-  error("percent param (#{percent}) can't be above 100!") if percent.to_f > 100.0
-  return false if percent.to_f == 0.0
-  return true if percent.to_f == 100.0
+  error("percent param (#{percent}) can't be above 100!") if percent > 100.0
+  return false if percent == 0.0
+  return true if percent == 100.0
   rand() < (p / 100.0)
 end
 

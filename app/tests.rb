@@ -148,6 +148,10 @@ test :percent_chance? do |args, assert|
   it "returns true if the percent is 100" do
     assert.true!(percent_chance?(100))
   end
+
+  it "returns a boolean" do
+    assert.true!([TrueClass, FalseClass].include?(percent_chance?(50).class))
+  end
 end
 
 test :collide do |args, assert|

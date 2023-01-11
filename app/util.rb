@@ -15,7 +15,7 @@ def percent_chance?(percent)
   error("percent param (#{percent}) can't be above 100!") if percent > 100.0
   return false if percent == 0.0
   return true if percent == 100.0
-  rand() < (p / 100.0)
+  rand() < (percent / 100.0)
 end
 
 # strips away the junk added by GTK::OpenEntity

@@ -176,7 +176,7 @@ debug_label(args, player.x, player.y - 4, "#{player.x}, #{player.y}")
 
 ### Tests
 
-The `app/tests.rb` contains tests for the methods provided by Scale, as well as the source for [DragonTest](https://github.com/DragonRidersUnite/dragon_test), a simple testing library for DragonRuby GTK. You'll see plenty of examples in there, but here's a quick overview:
+The `test/tests.rb` is where you can put tests for your game. It also includes tests for methods provided by Scale. Tests are powered by [DragonTest](https://github.com/DragonRidersUnite/dragon_test), a simple testing library for DragonRuby GTK. You'll see plenty of examples in there, but here's a quick overview:
 
 Write tests:
 
@@ -198,11 +198,12 @@ You've got these assertions:
 - `assert.true!` - whether or not what's passed in is truthy, ex: `assert.true!(5 + 5 == 10)`
 - `assert.false!` - whether or not what's passed in is falsey, ex: `assert.false!(5 + 5 != 10)`
 - `assert.equal!` - whether or not what's passed into param 1 is equal to param 2, ex: `assert.equal!(5, 2 + 3)`
-- `assert.exception!` - expect the called code to raise an error, ex: `assert.exception!(-> (args) { text(args, :not_present) }, KeyError, "Key not found: :not_present")`
+- `assert.exception!` - expect the called code to raise an error with optional message, ex: `assert.exception!(KeyError, "Key not found: :not_present") { text(args, :not_present) }`
+- `assert.includes!` - whether or not the array includes the value, ex: `assert.includes!([1, 2, 3], 2)`
 
 Run your tests with: `./run_tests` — test runner script for Unix-like environments with a shell that has proper exit codes on success and fail
 
-Your tests will also run when you save `app/tests.rb` and be output to your running game's logs. Nifty!
+Your tests will also run when you save test files and be output to your running game's logs. Nifty!
 
 ## Make Scale Yours!
 

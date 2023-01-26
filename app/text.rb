@@ -8,7 +8,6 @@ TEXT = {
   controls_title: "Controls",
   controls_keyboard: "WASD/Arrows to move | J/Z/Space to confirm | Esc/P to pause",
   controls_gamepad: "Stick/D-Pad to move | A to confirm | Start to pause",
-  exp_to_next_level: "Exp to Next Level",
   fullscreen: "Fullscreen",
   made_by: "A game by",
   off: "OFF",

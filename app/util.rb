@@ -123,6 +123,11 @@ def debug?
   @debug ||= !$gtk.production
 end
 
+# whether or not you're on a mobile device (or simulating one)
+def mobile?
+  $gtk.platform?(:mobile) || $gtk.args.state.simulate_mobile
+end
+
 # sets the passed in entity's color for the specified number of ticks
 def flash(entity, color, tick_count)
   entity.flashing = true

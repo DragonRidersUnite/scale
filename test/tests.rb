@@ -152,6 +152,15 @@ test :collide do |args, assert|
   end
 end
 
+test :mobile do |args, assert|
+  it "supports simulation setting" do
+    $gtk.args.state.simulate_mobile = true
+    assert.true!(mobile?)
+    $gtk.args.state.simulate_mobile = false
+    assert.false!(mobile?)
+  end
+end
+
 # add your tests here
 
 run_tests

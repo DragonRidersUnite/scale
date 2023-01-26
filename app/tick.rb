@@ -40,6 +40,17 @@ def debug_tick(args)
     play_sfx(args, :select)
     $gtk.reset
   end
+
+  if args.inputs.keyboard.key_down.m
+    play_sfx(args, :select)
+    args.state.simulate_mobile = !args.state.simulate_mobile
+    msg = if args.state.simulate_mobile
+            "Mobile simulation on"
+          else
+            "Mobile simulation off"
+          end
+    args.gtk.notify!(msg)
+  end
 end
 
 # render a label that is only shown when in debug mode and the debug details

@@ -205,6 +205,25 @@ Run your tests with: `./run_tests` — test runner script for Unix-like environm
 
 Your tests will also run when you save test files and be output to your running game's logs. Nifty!
 
+## Debug Shortcuts
+
+You'll find these in the README, too. Scale comes with some handy keyboard shortcuts that only run in debug mode to make building your game easier.
+
+- <kbd>0</kbd> — display debug details (ex: framerate)
+- <kbd>i</kbd> — reload sprites from disk
+- <kbd>r</kbd> — reset the entire game state
+- <kbd>m</kbd> — toggle mobile simulation
+
+## Mobile Development
+
+Use the `#mobile?` method to check to add logic specifically for mobile devices. Press <kbd>m</kbd> to simulate this on desktop so you can easily check how your game will look on those platforms.
+
+Example:
+
+``` ruby
+text_key = mobile? ? :instructions_mobile : :instructions
+```
+
 ## Make Scale Yours!
 
 This is your game now. Scale is just here to help you out. Change Scale to meet your game's needs.

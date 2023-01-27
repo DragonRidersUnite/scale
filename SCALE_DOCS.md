@@ -164,7 +164,7 @@ You can check for Debug mode in your game anywhere with the `debug?` method.
 
 ### `#debug_label` Method
 
-It's common to need to display debug-only information about entities in your game. Maybe you want to see a value that changes over time. This is what `#debug_label` is for. It putputs text that's shown when you toggle on debug details with the <kbd>0</kbd> key.
+It's common to need to display debug-only information about entities in your game. Maybe you want to see a value that changes over time. This is what `#debug_label` is for. It outputs text that's shown when you toggle on debug details with the <kbd>0</kbd> key.
 
 Here's an example of how to use it to track the player's current coordinates:
 

@@ -1,7 +1,6 @@
 # Code that only gets run once on game start
 def init(args)
   GameSetting.load_settings(args)
-  args.gtk.hide_cursor
 end
 
 def tick(args)

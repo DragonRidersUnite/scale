@@ -12,6 +12,8 @@ def tick(args)
   args.state.has_focus ||= true
   args.state.scene ||= :main_menu
 
+  track_swipe(args) if mobile?
+
   Scene.send("tick_#{args.state.scene}", args)
 
   debug_tick(args)

@@ -224,6 +224,14 @@ Example:
 text_key = mobile? ? :instructions_mobile : :instructions
 ```
 
+There are convenient methods and tracking for swipe inputs on touch devices. Scale automatically keeps track of them, and if you use the `up?(args)`, `down?(args)`, `left?(args)`, `right?(args)` methods, they're automatically checked. Otherwise, you can check to see if a swipe occurred with:
+
+``` ruby
+if args.state.swipe.up
+  # do the thing
+end
+```
+
 ## Make Scale Yours!
 
 This is your game now. Scale is just here to help you out. Change Scale to meet your game's needs.

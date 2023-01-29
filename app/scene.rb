@@ -30,6 +30,7 @@ module Scene
       end
 
       args.state.scene = scene
+      raise FinishTick.new
     end
   end
 end

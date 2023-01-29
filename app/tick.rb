@@ -17,7 +17,11 @@ def tick(args)
   Scene.send("tick_#{args.state.scene}", args)
 
   debug_tick(args)
+rescue FinishTick
 end
+
+# raise this as an easy way to end the current tick early
+class FinishTick < StandardError; end
 
 # code that only runs while developing
 # put shortcuts and helpful info here

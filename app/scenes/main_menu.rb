@@ -25,6 +25,10 @@ module Scene
 
       labels = []
       labels << label(
+        "v#{version}",
+        x: 32.from_left, y: 32.from_top,
+        size: SIZE_XS, align: ALIGN_LEFT)
+      labels << label(
         title.upcase, x: args.grid.w / 2, y: args.grid.top - 100,
         size: SIZE_LG, align: ALIGN_CENTER, font: FONT_BOLD_ITALIC)
       labels << label(

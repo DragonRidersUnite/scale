@@ -161,6 +161,18 @@ test :mobile do |args, assert|
   end
 end
 
+test :center_of do |args, assert|
+  it "returns a hash with the x and y coord of the center of the rectangle-ish object" do
+    assert.equal!(center_of({ x: 100, y: 100, w: 200, h: 250 }), { x: 200.0, y: 225.0 })
+  end
+
+  it "errors when the object isn't rectangle-ish" do
+    assert.exception!(StandardError, "entity does not have needed properties to find center; must have x, y, w, and h properties") do
+      center_of({ x: 100, h: 250 })
+    end
+  end
+end
+
 # add your tests here
 
 run_tests

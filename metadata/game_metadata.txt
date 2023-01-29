@@ -2,7 +2,7 @@ devid=myitchusername
 devtitle=My Name
 gameid=my-game-title
 gametitle=My Game Title
-version=0.1
+version=0.1-dev
 icon=metadata/icon.png
 
 # === Flags available at all licensing tiers ===

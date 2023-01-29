@@ -9,13 +9,14 @@ module Menu
     #     on_select: -> (args) { "do some stuff in this lambda" }
     #   }
     # ]
-    def tick(args, state_key, options)
+    def tick(args, state_key, options, menu_y: 420)
       args.state.send(state_key).current_option_i ||= 0
       args.state.send(state_key).hold_delay ||= 0
       menu_state = args.state.send(state_key)
 
       labels = []
 
+      spacer = mobile? ? 100 : 60
       options.each.with_index do |option, i|
         text = case option.kind
                when :toggle
@@ -23,22 +24,39 @@ module Menu
                else
                  text(option[:key])
                end
+
         label = label(
           text,
           x: args.grid.w / 2,
-          y: 360 + (options.length - i * 52),
+          y: menu_y + (options.length - i * spacer),
           align: ALIGN_CENTER,
           size: SIZE_MD
         )
+        label.key = option[:key]
         label_size = args.gtk.calcstringbox(label.text, label.size_enum)
         labels << label
         if menu_state.current_option_i == i
-          args.outputs.solids << {
-            x: label.x - (label_size[0] / 1.4) - 24 + (Math.sin(args.state.tick_count / 8) * 4),
-            y: label.y - 22,
-            w: 16,
-            h: 16,
-          }.merge(WHITE)
+          if !mobile? || (mobile? && args.inputs.controller_one.connected)
+            args.outputs.solids << {
+              x: label.x - (label_size[0] / 1.4) - 24 + (Math.sin(args.state.tick_count / 8) * 4),
+              y: label.y - 22,
+              w: 16,
+              h: 16,
+            }.merge(WHITE)
+          end
+        end
+      end
+
+      labels.each do |l|
+        button_border = { w: 340, h: 80, x: l.x - 170, y: l.y - 55 }.merge(WHITE)
+        if mobile?
+          args.outputs.borders << button_border
+        end
+
+        if args.inputs.mouse.up && args.inputs.mouse.inside_rect?(button_border)
+          o = options.find { |o| o[:key] == l[:key] }
+          play_sfx(args, :menu)
+          o[:on_select].call(args) if o
         end
       end
 

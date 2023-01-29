@@ -9,6 +9,7 @@ module Sprite
     exp_chip: "sprites/exp_chip.png",
     familiar: "sprites/familiar.png",
     player: "sprites/player.png",
+    pause: "sprites/pause.png",
   }
 
   class << self

@@ -134,6 +134,36 @@ end
 
 It takes arrays or single objects as parameters.
 
+### Menus
+
+You'll find examples of menus throughout the Scale codebase for common scenes like Settings and the Main Menu.
+
+Menus support cursor-based navigation or buttons for mouse/touch.
+
+How they work is pretty simple, you just call `Menu.tick` and pass in an array of menu options.
+
+``` ruby
+options = [
+  {
+    key: :attack,
+    on_select: -> (args) do
+      # do the attack
+    end
+  },
+  {
+    key: :defend,
+    on_select: -> (args) do
+      # defend
+    end
+  },
+]
+Menu.tick(args, :your_menu_name, options)
+```
+
+The options array is just a collection of hashes with a key and an `on_select` lambda that gets called with `args` for doing anything in your game that you need to have happen.
+
+`Menu.tick` also supports an optional `menu_y` for positioning the menu.
+
 ### Colors
 
 A simple color palette is provided in `app/constants.rb`. Most of the primary colors are present, along with some variants. They return Hashes with `r`, `g`, and `b` keys. If you have a sprite that you want to change red, you'd do this:

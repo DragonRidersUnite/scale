@@ -24,7 +24,11 @@ end
 def debug_tick(args)
   return unless debug?
 
-  debug_label(args, args.grid.right - 24, args.grid.top, "#{args.gtk.current_framerate.round}")
+  debug_label(
+    args, 24.from_right, 32.from_bottom,
+    "v#{version} | DR v#{$gtk.version} (#{$gtk.platform}) | Ticks: #{args.state.tick_count} | FPS: #{args.gtk.current_framerate.round}",
+    ALIGN_RIGHT)
+
 
   if args.inputs.keyboard.key_down.zero
     play_sfx(args, :select)
@@ -56,11 +60,11 @@ end
 
 # render a label that is only shown when in debug mode and the debug details
 # are shown; toggle with +0+ key
-def debug_label(args, x, y, text)
+def debug_label(args, x, y, text, align=ALIGN_LEFT)
   return unless debug?
   return unless args.state.render_debug_details
 
-  args.outputs.debug << { x: x, y: y, text: text }.merge(WHITE).label!
+  args.outputs.debug << { x: x, y: y, text: text, alignment_enum: align }.merge(WHITE).label!
 end
 
 # different than background_color... use this to change the bg color for the

@@ -10,6 +10,8 @@ Quickly start a new DragonRuby Game Toolkit game with useful conventions and hel
 
 Looking for a simpler version? Check out [the `simple` release](https://github.com/DragonRidersUnite/scale/releases/tag/simple) that's just `app/main.rb` with some constants and helper methods.
 
+[Check out the CHANGELOG for the summary of recent changes!](https://github.com/DragonRidersUnite/scale/wiki/CHANGELOG)
+
 ## Bugs / Features
 
 Last tested against DragonRuby Game Toolkit v4.3.

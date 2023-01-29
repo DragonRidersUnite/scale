@@ -2,6 +2,8 @@
 
 Everything you need to get started with using [Scale](https://github.com/DragonRidersUnite/scale).
 
+[Check out the CHANGELOG for the summary of recent changes!](https://github.com/DragonRidersUnite/scale/wiki/CHANGELOG)
+
 ## Quickstart
 
 Once you've got your game from the Scale template dropped into your `mygame` directory in your DragonRuby GTK game, here's what you'll want to do next.

@@ -29,7 +29,7 @@ def debug_tick(args)
   return unless debug?
 
   debug_label(
-    args, 24.from_right, 32.from_bottom,
+    args, 24.from_right, 24.from_top,
     "v#{version} | DR v#{$gtk.version} (#{$gtk.platform}) | Ticks: #{args.state.tick_count} | FPS: #{args.gtk.current_framerate.round}",
     ALIGN_RIGHT)
 

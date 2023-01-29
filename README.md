@@ -12,7 +12,7 @@ Looking for a simpler version? Check out [the `simple` release](https://github.c
 
 ## Bugs / Features
 
-Last tested against DragonRuby Game Toolkit v4.0.
+Last tested against DragonRuby Game Toolkit v4.3.
 
 - Functional approach to the code, namespaced in modules
 - Use the DragonRuby GTK methods and data structures you know and love
@@ -23,6 +23,7 @@ Last tested against DragonRuby Game Toolkit v4.0.
 - Settings that persist to disk
 - Displays framerate in the upper-right hand corner of the game when running in development mode
 - `#debug?` helper to easily check if the game is running in development mode; useful for custom commands
+- `#mobile?` to easily check when on mobile and <kbd>M</kbd> to simulate mobile
 - Reload all sprites in development using the `i` key
 - Reset the game with `r` key, calls `$gtk.reset`
 - Put all debug-only code in `#debug_tick`
@@ -30,6 +31,7 @@ Last tested against DragonRuby Game Toolkit v4.0.
 - `#version` to get the version of your game
 - Constants for various values and enums: `FPS`, `BLEND_*`, `ALIGN_*`
 - Tests for the methods!
+- See more in [SCALE_DOCS.md](./SCALE_DOCS.md)
 
 ## Use It
 

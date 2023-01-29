@@ -10,6 +10,7 @@ TEXT = {
   controls_gamepad: "Stick/D-Pad to move | A to confirm | Start to pause",
   fullscreen: "Fullscreen",
   made_by: "A game by",
+  music: "Music",
   off: "OFF",
   on: "ON",
   paused: "Paused",

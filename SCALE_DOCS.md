@@ -144,6 +144,35 @@ args.outputs.sprites << {
 }.merge(RED)
 ```
 
+### Sound Effects & Music
+
+Scale comes with a few helper methods to make playing music and sound effects easy, as well as settings to enable or disable their playback.
+
+Play a sound effect:
+
+``` ruby
+play_sfx(args, :enemy_hit)
+```
+
+the symbol (or string) file key for the file must correspond to the file's name in `sounds/`.
+
+Here's how to play music:
+
+``` ruby
+play_music(args, :menu)
+```
+
+the symbol (or string) file key for the file must correspond to the file's name in `sounds/`.
+
+You can pause and resume music easily with:
+
+``` ruby
+pause_music(args)
+resume_music(args)
+```
+
+Scale assumes only one music track can be playing at a time.
+
 ### Adding New Files
 
 When you add new code files to `app/`, just be sure to require them in `app/main.rb`.

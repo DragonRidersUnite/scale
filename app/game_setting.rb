@@ -38,6 +38,7 @@ module GameSetting
         end
       else
         args.state.setting.sfx = true
+        args.state.setting.music = true
         args.state.setting.fullscreen = false
       end
 

@@ -17,6 +17,17 @@ module Scene
           end
         },
         {
+          key: :music,
+          kind: :toggle,
+          setting_val: args.state.setting.music,
+          on_select: -> (args) do
+            GameSetting.save_after(args) do |args|
+              args.state.setting.music = !args.state.setting.music
+              set_music_vol(args)
+            end
+          end
+        },
+        {
           key: :back,
           on_select: -> (args) { Scene.switch(args, :back) }
         },

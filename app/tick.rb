@@ -2,6 +2,7 @@
 def init(args)
   reset_swipe(args)
   GameSetting.load_settings(args)
+  args.state.scene_switch_tick ||= 0
 end
 
 def tick(args)
@@ -76,4 +77,9 @@ end
 # visible portion of the game
 def draw_bg(args, color)
   args.outputs.solids << { x: args.grid.left, y: args.grid.bottom, w: args.grid.w, h: args.grid.h }.merge(color)
+end
+
+# Render background sprite instead of solid color
+def draw_bg_sprite(args, sprite_hash)
+  args.outputs.sprites << sprite_hash
 end

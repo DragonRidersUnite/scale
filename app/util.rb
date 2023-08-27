@@ -164,6 +164,17 @@ def center_of(entity)
   { x: entity.x + entity.w / 2, y: entity.y + entity.h / 2 }
 end
 
+# Method for scrolling a sprite background
+def scrolling_background(at, path, rate, x = 0)
+  rate *= 2
+  w = 720 * 2
+  h = 720 * 2
+  [
+    { x: x, y: h - at.*(rate) % h - h.half.half, w: w, h: h, path: path },
+    { x: x, y: 0 - at.*(rate) % h - h.half.half, w: w, h: h, path: path },
+  ]
+end
+
 # Returns true if the current tick is the first tick of the scene
 def first_scene_tick?(args)
   true if (args.tick_count - args.state.scene_switch_tick) == 1

@@ -164,7 +164,8 @@ def center_of(entity)
   { x: entity.x + entity.w / 2, y: entity.y + entity.h / 2 }
 end
 
-# Returns true if the current tick is the first tick of the scene
+# Returns true if the number of elapsed ticks since the scene switched is 1
+# thus indicating that this is the first tick of the scene
 def first_scene_tick?(args)
   true if (args.tick_count - args.state.scene_switch_tick) == 1
 end

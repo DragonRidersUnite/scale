@@ -2,7 +2,6 @@
 def init(args)
   reset_swipe(args)
   GameSetting.load_settings(args)
-  args.state.scene_switch_tick ||= 0
 end
 
 def tick(args)

@@ -15,7 +15,6 @@ module Scene
     #   Scene.switch(args, :gameplay)
     def switch(args, scene, reset: false, return_to: nil)
       args.state.scene_to_return_to = return_to if return_to
-      args.state.scene_switch_tick = args.tick_count
 
       if scene == :back && args.state.scene_to_return_to
         scene = args.state.scene_to_return_to

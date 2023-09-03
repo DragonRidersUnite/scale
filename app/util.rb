@@ -163,3 +163,9 @@ def center_of(entity)
   raise StandardError.new("entity does not have needed properties to find center; must have x, y, w, and h properties") unless entity.x && entity.y && entity.h && entity.w
   { x: entity.x + entity.w / 2, y: entity.y + entity.h / 2 }
 end
+
+# Returns true if the number of elapsed ticks since the scene switched is 1
+# thus indicating that this is the first tick of the scene
+def first_scene_tick?(args)
+  true if (args.tick_count - args.state.scene_switch_tick) == 1
+end

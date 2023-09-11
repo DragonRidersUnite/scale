@@ -78,3 +78,9 @@ end
 def draw_bg(args, color)
   args.outputs.solids << { x: args.grid.left, y: args.grid.bottom, w: args.grid.w, h: args.grid.h }.merge(color)
 end
+
+# draw a background sprite that fills the screen
+# bg_sprite should be a hash containing sprite primitive attributes (path, RGB, alpha, etc)
+def draw_bg_sprite(args, bg_sprite)
+  args.outputs.sprites << { x: args.grid.left, y: args.grid.bottom, w: args.grid.w, h: args.grid.h }.merge(bg_sprite)
+end

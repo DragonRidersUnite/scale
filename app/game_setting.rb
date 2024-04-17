@@ -28,7 +28,7 @@ module GameSetting
       settings = args.gtk.read_file(settings_file)&.chomp
 
       if settings
-        settings.split(",").map { |s| s.split(":") }.to_h.each do |k, v|
+        settings.split(",").to_h { |s| s.split(":") }.each do |k, v|
           if v == "true"
             v = true
           elsif v == "false"

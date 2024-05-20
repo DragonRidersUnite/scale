@@ -1,7 +1,12 @@
 module Scene
+  def self.tick_main_menu(args)
+    MainMenuScene.tick(args)
+  end
+
+module MainMenuScene
   class << self
     # what's displayed when your game starts
-    def tick_main_menu(args)
+    def tick(args)
       draw_bg(args, DARK_PURPLE)
       options = [
         {
@@ -46,6 +51,6 @@ module Scene
 
       args.outputs.labels << labels
     end
-
   end
+end
 end

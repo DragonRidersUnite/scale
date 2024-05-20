@@ -1,7 +1,12 @@
 module Scene
+  def self.tick_gameplay(args)
+    GameplayScene.tick(args)
+  end
+
+module GameplayScene
   class << self
     # This is your main entrypoint into the actual fun part of your game!
-    def tick_gameplay(args)
+    def tick(args)
       labels = []
       sprites = []
 
@@ -51,4 +56,5 @@ module Scene
       sprites << pause_button
     end
   end
+end
 end

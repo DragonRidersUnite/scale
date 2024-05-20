@@ -1,8 +1,13 @@
 module Scene
+  def self.tick_settings(args)
+    SettingsScene.tick(args)
+  end
+
+module SettingsScene
   class << self
     # reachable via main menu or pause menu, allows for configuring the game
     # for the player's preferences.
-    def tick_settings(args)
+    def tick(args)
       draw_bg(args, DARK_GREEN)
 
       options = [
@@ -57,4 +62,5 @@ module Scene
       args.outputs.labels << label(:settings, x: args.grid.w / 2, y: args.grid.top - 200, align: ALIGN_CENTER, size: SIZE_LG, font: FONT_BOLD)
     end
   end
+end
 end

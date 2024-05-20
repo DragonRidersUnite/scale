@@ -1,7 +1,12 @@
 module Scene
+  def self.tick_paused(args)
+    PausedScene.tick(args)
+  end
+
+module PausedScene
   class << self
     # scene reached from gameplay when the player needs a break
-    def tick_paused(args)
+    def tick(args)
       draw_bg(args, DARK_YELLOW)
 
       options = [
@@ -36,4 +41,5 @@ module Scene
       args.outputs.labels << label(:paused, x: args.grid.w / 2, y: args.grid.top - 200, align: ALIGN_CENTER, size: SIZE_LG, font: FONT_BOLD)
     end
   end
+end
 end
